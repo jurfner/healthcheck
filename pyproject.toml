@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jurfner-healthcheck"
+version = "0.1.0"
+description = "通过字符级与结构级特征识别副本健康检查的误判的痕迹，给出密度与命中位置"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "jurfner" }]
+keywords = ["analysis", "observability", "evaluation", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://jurfner.github.io"
+Repository = "https://github.com/jurfner/healthcheck"
+Issues = "https://github.com/jurfner/healthcheck/issues"
+
+[project.scripts]
+healthcheck = "healthcheck:main"
+
+[tool.setuptools]
+py-modules = ["healthcheck"]
